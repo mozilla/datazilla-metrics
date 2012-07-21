@@ -27,3 +27,9 @@ It may be easier to just use the system packages for numpy and scipy (``sudo
 apt-get install python-scipy``); in that case to import it from within a
 `virtualenv`_ you'd need to create the virtualenv with the
 ``--system-site-packages`` flag.
+
+
+.. _scipy: http://www.scipy.org
+.. _numpy: http://numpy.scipy.org
+.. _pip: http://www.pip-installer.org
+.. _virtualenv: http://www.virtualenv.org
