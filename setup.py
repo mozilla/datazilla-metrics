@@ -23,4 +23,5 @@ setup(
     packages=["dzmetrics"],
     install_requires=["scipy"],
     zip_safe=False,
+    test_suite="dzmetrics.tests",
     )
