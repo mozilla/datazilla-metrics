@@ -38,3 +38,11 @@ virtualenv with the ``--system-site-packages`` flag::
 .. _numpy: http://numpy.scipy.org
 .. _pip: http://www.pip-installer.org
 .. _virtualenv: http://www.virtualenv.org
+
+
+Running the tests
+-----------------
+
+::
+
+   python setup.py test
