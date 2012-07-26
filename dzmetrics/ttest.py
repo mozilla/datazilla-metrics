@@ -55,7 +55,7 @@ def welchs_ttest(x1, x2, alpha=None):
 
 def welchs_ttest_internal(n1, s1, m1, n2, s2, m2):
     """
-    Implements one-sided Welch's t-test with pre-calculated means and stdevs.
+    Execute one-sided Welch's t-test given pre-calculated means and stddevs.
 
     Accepts summary data (N, stddev, and mean) for two datasets and performs
     one-sided Welch's t-test, returning p-value.
