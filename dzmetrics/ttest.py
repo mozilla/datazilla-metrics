@@ -18,7 +18,8 @@ def welchs_ttest(x1, x2, alpha=None):
     Null hypothesis is that means are equal or mean of x1 is less than mean of
     x2. Null hypothesis is rejected if mean of x1 is greater than mean of x2
     (i.e., a performance regression if the supplied data are performance test
-    timings).
+    timings, presuming x1 is data for the current changeset and x2 is data for
+    the parent changeset).
 
     Original code by Joseph Kelly, Mozilla metrics.
 
