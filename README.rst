@@ -7,7 +7,7 @@ This package implements statistical methods useful for `Datazilla`_.
 
 Currently the only methods implemented are Welch's t-test
 (``dzmetrics.ttest.welchs_ttest``) and Benjamini-Hochberg false discovery rate
-control (``dzmetrics.ttest.fdr``). See the docstrings of those functions for
+control (``dzmetrics.fdr.rejector``). See the docstrings of those functions for
 details.
 
 
@@ -20,13 +20,18 @@ scipy requires the BLAS and LAPACK libraries and a Fortran compiler. For
 instance, to get everything in place on an Ubuntu 12.04 system, run::
 
    sudo apt-get install libblas-dev liblapack-dev gfortran
+   virtualenv dzmetrics
    pip install numpy
    pip install scipy
+   pip install git://github.com/mozilla/datazilla-metrics
 
-It may be easier to just use the system packages for numpy and scipy (``sudo
-apt-get install python-scipy``); in that case to import it from within a
-`virtualenv`_ you'd need to create the virtualenv with the
-``--system-site-packages`` flag.
+It may be easier to just use the system packages for numpy and scipy; in that
+case to import it from within a `virtualenv`_ you'd need to create the
+virtualenv with the ``--system-site-packages`` flag::
+
+   sudo apt-get install python-scipy
+   virtualenv --system-site-packages dzmetrics
+   pip install git://github.com/mozilla/datazilla-metrics
 
 
 .. _scipy: http://www.scipy.org
