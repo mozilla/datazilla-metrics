@@ -10,10 +10,12 @@ def rejector(p_values, q=0.1):
 
     Given a list of p-values (floats) for independent comparisons, and a q
     value (the upper bound on the false discovery rate; the expected proportion
-    of false rejections of the null hypothesis), returns a list of boolean
-    values the same length as the given list of p-values, where a ``True``
-    value represents rejection of the null hypothesis for that p-value and
-    ``False`` represents acceptance of the null hypothesis.
+    of false rejections of the null hypothesis), returns a dictionary with two
+    keys: "status" is a list of boolean values the same length as the given
+    list of p-values, where a ``True`` value represents rejection of the null
+    hypothesis for that p-value and ``False`` represents acceptance of the null
+    hypothesis, and "count" is the number of p-values for which the null
+    hypothesis was rejected (these will always be the lowest "count" p-values).
 
     """
     # setup useful vars
@@ -35,4 +37,4 @@ def rejector(p_values, q=0.1):
     for i in index:
         output[sortedp[i][1]] = status[i]
 
-    return output
+    return {"status": output, "count": indicator}
