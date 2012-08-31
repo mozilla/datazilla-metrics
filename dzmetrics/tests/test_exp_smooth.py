@@ -1,7 +1,7 @@
 """Tests for ttest module."""
 from unittest import TestCase
 
-from dzmetrics.exp_smooth import exp_smooth
+from dzmetrics.data_smoothing import exp_smooth
 
 NEW_N = 25
 NEW_S = 5
